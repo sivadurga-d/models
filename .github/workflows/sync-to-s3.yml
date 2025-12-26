@@ -8,46 +8,36 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  id-token: write   # for OIDC role assumption
+  id-token: write
   contents: read
-
-concurrency:
-  group: upload-json-configs-to-s3
-  cancel-in-progress: true
 
 jobs:
   upload:
     runs-on: ubuntu-latest
+    environment: production   # <-- MUST match your GitHub Environment name
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Recommended: OIDC -> Assume Role (no long-lived AWS keys)
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ vars.AWS_REGION }}
 
-      # Upload ONLY json files. Excludes node_modules/.git/.github by default since they aren't *.json,
-      # but we explicitly exclude common noisy paths anyway.
       - name: Sync JSON files to S3 (only *.json)
         run: |
-          aws s3 sync . "s3://${{ secrets.S3_BUCKET }}/${{ secrets.S3_PREFIX }}" \
+          aws s3 sync . "s3://${{ vars.S3_BUCKET }}/${{ vars.S3_PREFIX }}" \
             --exclude "*" \
             --include "*.json" \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude "node_modules/*" \
             --content-type "application/json" \
             --cache-control "no-cache"
 
-      # Optional: delete JSONs in destination that were removed from repo.
-      # WARNING: only enables deletion for *.json under the prefix.
       - name: Delete removed JSONs from S3 (optional)
-        if: ${{ secrets.S3_DELETE_MISSING == 'true' }}
+        if: ${{ vars.S3_DELETE_MISSING == 'true' }}
         run: |
-          aws s3 sync . "s3://${{ secrets.S3_BUCKET }}/${{ secrets.S3_PREFIX }}" \
+          aws s3 sync . "s3://${{ vars.S3_BUCKET }}/${{ vars.S3_PREFIX }}" \
             --exclude "*" \
             --include "*.json" \
             --delete
