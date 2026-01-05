@@ -1,0 +1,60 @@
+name: Upload JSON configs to S3
+
+on:
+  push:
+    branches: ["dev"]
+    paths:
+      - "**/*.json"
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    environment: DEV_ENVs
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Debug context
+        run: |
+          echo "repo=$GITHUB_REPOSITORY"
+          echo "ref=$GITHUB_REF"
+          echo "env_name=${{ job.environment }}"
+          echo "aws_region=${{ vars.AWS_REGION }}"
+          echo "s3_bucket=${{ vars.S3_BUCKET }}"
+          echo "s3_prefix=${{ vars.S3_PREFIX }}"
+
+      - name: Debug role arn present
+        run: |
+          if [ -z "${{ secrets.AWS_ROLE_TO_ASSUME }}" ]; then
+            echo "AWS_ROLE_TO_ASSUME is EMPTY (environment secret not being picked up)"
+            exit 1
+          fi
+          echo "AWS_ROLE_TO_ASSUME is set"
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Sync JSON files to S3 (only *.json)
+        run: |
+          aws s3 sync . "s3://${{ vars.S3_BUCKET }}/${{ vars.S3_PREFIX }}" \
+            --exclude "*" \
+            --include "*.json" \
+            --content-type "application/json" \
+            --cache-control "no-cache"
+
+      - name: Delete removed JSONs from S3 (optional)
+        if: ${{ vars.S3_DELETE_MISSING == 'true' }}
+        run: |
+          aws s3 sync . "s3://${{ vars.S3_BUCKET }}/${{ vars.S3_PREFIX }}" \
+            --exclude "*" \
+            --include "*.json" \
+            --delete
