@@ -2579,5 +2579,10 @@
     "type": {
       "primary": "chat"
     }
+  },
+  "Mistral-Large-3": {
+    "type": {
+      "primary": "chat"
+    }
   }
 }

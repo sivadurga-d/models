@@ -2541,5 +2541,13 @@
       "primary": "audio"
     },
     "disablePlayground": true
+  },
+  "gpt-image-1.5-2025-12-16": {
+    "disablePlayground": true,
+    "type": { "primary": "text" }
+  },
+  "gpt-image-1.5": {
+    "disablePlayground": true,
+    "type": { "primary": "text" }
   }
 }
