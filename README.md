@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="https://portkey.ai">
-    <img src="https://portkey.ai/portal-assets/portkey-logo.svg" height="40" alt="Portkey" />
-  </a>
-</p>
+
 
 <h1 align="center">LLM Pricing and Configs</h1>
 
