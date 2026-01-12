@@ -1582,6 +1582,24 @@
       }
     }
   },
+  "claude-sonnet-4-5-20250929": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0003
+        },
+        "response_token": {
+          "price": 0.0015
+        },
+        "cache_write_input_token": {
+          "price": 0.000375
+        },
+        "cache_read_input_token": {
+          "price": 0.00003
+        }
+      }
+    }
+  },
   "claude-sonnet-4-5@20250929": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -1600,6 +1618,23 @@
       }
     }
   },
+  "claude-haiku-4-5-20251001": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0001
+        },
+        "response_token": {
+          "price": 0.0005
+        },
+        "cache_write_input_token": {
+          "price": 0.000125
+        },
+        "cache_read_input_token": {
+          "price": 0.00001
+        }
+      }
+    },
   "claude-haiku-4-5@20251001": {
     "pricing_config": {
       "pay_as_you_go": {
