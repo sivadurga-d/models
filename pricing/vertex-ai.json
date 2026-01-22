@@ -350,6 +350,18 @@
       }
     }
   },
+  "textembedding-gecko": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00001
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
   "textembedding-gecko@001": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -378,7 +390,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.0025
+          "price": 0.00001
         },
         "response_token": {
           "price": 0
@@ -390,7 +402,19 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.0025
+          "price": 0.00001
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "text-embedding": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00001
         },
         "response_token": {
           "price": 0
