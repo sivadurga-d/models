@@ -1861,8 +1861,7 @@
       "supported": ["image", "tools"]
     },
     "removeParams": ["top_p"]
-  }
-,
+  },
   "ai21.jamba-1-5-large-v1:0": {
     "type": { "primary": "chat" }
   },
