@@ -1312,32 +1312,6 @@
       }
     }
   },
-  "claude-opus-4-6-v1:0": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.0005
-        },
-        "response_token": {
-          "price": 0.0025
-        },
-        "cache_write_input_token": {
-          "price": 0.000625
-        },
-        "cache_read_input_token": {
-          "price": 0.00005
-        }
-      },
-      "batch_config": {
-        "request_token": {
-          "price": 0.00025
-        },
-        "response_token": {
-          "price": 0.00125
-        }
-      }
-    }
-  },
   "us.anthropic.claude-opus-4-6-v1:0": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -1468,32 +1442,6 @@
       }
     }
   },
-  "claude-opus-4-6": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.0005
-        },
-        "response_token": {
-          "price": 0.0025
-        },
-        "cache_write_input_token": {
-          "price": 0.000625
-        },
-        "cache_read_input_token": {
-          "price": 0.00005
-        }
-      },
-      "batch_config": {
-        "request_token": {
-          "price": 0.00025
-        },
-        "response_token": {
-          "price": 0.00125
-        }
-      }
-    }
-  },
   "mistral.pixtral-large-2502-v1:0": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -1598,6 +1546,14 @@
         },
         "response_token": {
           "price": 0.00006
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.0000075
+        },
+        "response_token": {
+          "price": 0.00003
         }
       }
     }
