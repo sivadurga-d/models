@@ -116,6 +116,33 @@
       "currency": "USD"
     }
   },
+  "glm-5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.001
+        },
+        "response_token": {
+          "price": 0.0032
+        },
+        "cache_read_input_token": {
+          "price": 0.0002
+        }
+      }
+    }
+  },
+  "glm-5-code": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0012
+        },
+        "response_token": {
+          "price": 0.005
+        }
+      }
+    }
+  },
   "glm-4.7": {
     "pricing_config": {
       "pay_as_you_go": {
