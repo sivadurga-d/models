@@ -2550,8 +2550,14 @@
         "request_text_token": {
           "price": 0.0005
         },
+        "cached_image_input_token": {
+          "price": 0.00025
+        },
         "cache_read_image_input_token": {
           "price": 0.00025
+        },
+        "cached_text_input_token": {
+          "price": 0.000125
         },
         "cache_read_text_input_token": {
           "price": 0.000125
@@ -2632,8 +2638,14 @@
         "response_text_token": {
           "price": 0.001
         },
+        "cached_image_input_token": {
+          "price": 0.0002
+        },
         "cache_read_image_input_token": {
           "price": 0.0002
+        },
+        "cached_text_input_token": {
+          "price": 0.000125
         },
         "cache_read_text_input_token": {
           "price": 0.000125
