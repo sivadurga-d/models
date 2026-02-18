@@ -50,8 +50,8 @@ jobs:
         if: steps.changed.outputs.paths != ''
         run: |
           npm ci
-          npx prettier general/ --write
-          npx eslint general/ --ext .json --fix
+          npm run format
+          npm run lint:fix
 
       - name: Check for uncommitted changes
         id: status
