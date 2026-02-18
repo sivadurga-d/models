@@ -2562,5 +2562,346 @@
   "gpt-5.3-codex": {
     "disablePlayground": true,
     "type": { "primary": "text" }
+  },
+  "ada-v2": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-3.5-turbo": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-3.5-turbo-0125": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-3.5-turbo-0613": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-3.5-turbo-1106": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4.1": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4.1-2025-04-14": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4.1-mini": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4.1-mini-2025-04-14": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4.1-nano-2025-04-14": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4o": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4o-2024-08-06": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4o-mini": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:gpt-4o-mini-2024-07-18": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "ft:o4-mini-2025-04-16": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "gpt-3.5-turbo-16k-0613": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "gpt-5.1-codex-max": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
   }
+
 }
