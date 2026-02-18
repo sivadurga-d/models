@@ -41,7 +41,7 @@ jobs:
       - name: Sync each changed pricing file to general
         if: steps.changed.outputs.paths != ''
         run: |
-          for f in ${{ steps.changed.outputs.paths }}; do
+          echo "${{ steps.changed.outputs.paths }}" | while IFS= read -r f; do
             [[ -z "$f" ]] && continue
             python3 .github/scripts/sync_pricing_to_general.py "$f" || true
           done
