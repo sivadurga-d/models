@@ -114,5 +114,226 @@
         "type": {
             "primary": "chat", "supported": ["code"]
         }
+    },
+    "core": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "sd3-large": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "sd3-large-turbo": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "sd3-medium": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "sd3.5-large": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "sd3.5-large-turbo": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "sd3.5-medium": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "stable-diffusion-v1-6": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "stable-diffusion-xl-1024-v1-0": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "stable-diffusion-xl-beta-v2-2-2": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "ultra": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
     }
+
 }

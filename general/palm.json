@@ -16,5 +16,46 @@
   },
   "text-bison-001": {
     "type": { "primary": "text" }
+  },
+  "models/chat-bison-001": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "models/text-bison-001": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
   }
+
 }

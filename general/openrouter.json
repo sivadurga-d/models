@@ -5331,5 +5331,166 @@
           "maxValue": 8192
         }
       ]
+    },
+    "alibaba/tongyi-deepresearch-30b-a3b:free": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "allenai/olmo-3-32b-think:free": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "amazon/nova-2-lite-v1:free": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "deepcogito/cogito-v2-preview-deepseek-671b": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "google/gemini-2.5-flash-image-preview": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "kwaipilot/kat-coder-pro:free": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "meituan/longcat-flash-chat:free": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "moonshotai/kimi-linear-48b-a3b-instruct": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
     }
+
 }

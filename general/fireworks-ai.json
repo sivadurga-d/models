@@ -658,5 +658,306 @@
     "name": "qwen3-embedding-8b",
     "type": { "primary": "embedding" },
     "disablePlayground": true
+  },
+  "100b": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "16b": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "4b": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "dbrx-instruct": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "deepseek-r1": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "deepseek-v3": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "kimi-k2-instruct": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "kimi-k2-instruct-0905": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "kimi-k2-thinking": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "kimi-k2p5": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "llama-v3p1-405b-instruct": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "llama4-maverick-instruct-basic": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "llama4-scout-instruct-basic": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "mixtral-8x22b-instruct": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  },
+  "mixtral-8x7b": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
   }
+
 }

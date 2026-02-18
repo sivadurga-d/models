@@ -79,5 +79,106 @@
         "type": {
             "primary": "chat"
         }
+    },
+    "reka-core-20240415": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "reka-core-20240501": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "reka-edge": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "reka-edge-20240208": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
+    },
+    "reka-flash-20240226": {
+      "params": [
+        {
+          "key": "max_tokens",
+          "maxValue": 64000
+        }
+      ],
+      "type": {
+        "primary": "chat",
+        "supported": [
+          "image",
+          "pdf",
+          "doc",
+          "tools"
+        ]
+      },
+      "removeParams": [
+        "top_p"
+      ]
     }
+
 }

@@ -86,5 +86,26 @@
   "dall-e-3": {
       "name": "dall-e-3",
       "type": "image"
+  },
+  "o1": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
   }
+
 }
