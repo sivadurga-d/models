@@ -46,6 +46,12 @@ jobs:
             python3 .github/scripts/sync_pricing_to_general.py "$f" || true
           done
 
+      - name: Setup Node and format general JSON
+        if: steps.changed.outputs.paths != ''
+        run: |
+          npm ci
+          npx prettier general/ --write
+
       - name: Check for uncommitted changes
         id: status
         if: steps.changed.outputs.paths != ''

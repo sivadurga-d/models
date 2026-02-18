@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
 Sync model IDs from a pricing JSON file to the corresponding general JSON file.
-For each model present in pricing but missing in general, adds a minimal stub at the end.
-Existing file content (formatting, key order, all existing entries) is left unchanged;
-only the new model stubs are appended before the root closing brace.
+For each model present in pricing but missing in general, adds a minimal stub.
+Uses JSON only (no text manipulation); run `npm run format` after to format files.
 Usage: sync_pricing_to_general.py <pricing-file> [general-file]
 If general-file is omitted, inferred from pricing path (e.g. pricing/google.json -> general/google.json).
 """
@@ -18,7 +17,7 @@ GENERAL_RESERVED = {"name", "description", "default"}
 MINIMAL_STUB = {
     "params": [{"key": "max_tokens", "maxValue": 64000}],
     "type": {"primary": "chat", "supported": ["image", "pdf", "doc", "tools"]},
-    "removeParams": [ "top_p"]
+    "removeParams": ["top_p"],
 }
 
 
@@ -53,8 +52,7 @@ def main() -> int:
             print(f"::notice::No general file at {general_path}, skipping")
             continue
 
-        content = general_path.read_text()
-        general = json.loads(content)
+        general = json.loads(general_path.read_text())
         general_models = set(k for k in general.keys() if k not in GENERAL_RESERVED)
         # Only add model IDs; exclude reserved keys (name, description, default) so they are never added or overwritten.
         missing = sorted(pricing_models - general_models - GENERAL_RESERVED)
@@ -63,39 +61,14 @@ def main() -> int:
             print(f"All pricing models already present in {general_path}")
             continue
 
-        # Detect indent from file (e.g. "  \"key\"" -> 2 spaces).
-        indent = "  "
-        for line in content.splitlines():
-            stripped = line.lstrip()
-            if stripped.startswith('"') and ":" in stripped:
-                indent = line[: line.index('"')]
-                break
-
-        # Build the new entries string (script-formatted only for the added stubs).
-        stub_json = json.dumps(MINIMAL_STUB, indent=2)
-        stub_lines = stub_json.splitlines()
-        new_entries = []
+        # Build output from existing general; only add new keys for missing models.
+        output = dict(general)
         for model_id in missing:
-            # One entry: indent + "id": { ... } with inner lines indented
-            inner = "\n".join(indent + line for line in stub_lines[1:])
-            new_entries.append(f'{indent}"{model_id}": {{\n{inner}')
-        new_entries_str = ",\n".join(new_entries)
+            output[model_id] = dict(MINIMAL_STUB)
 
-        # Insert before the root closing "}": put comma on the last model's line, then new entries.
-        root_close = len(content) - 1
-        while root_close >= 0 and content[root_close] in " \t\n\r":
-            root_close -= 1
-        if root_close < 0 or content[root_close] != "}":
-            print(f"::warning::Could not find root closing brace in {general_path}, skipping", file=sys.stderr)
-            continue
-        # Newline before root "}" is at root_close - 1; insert after last "}" so comma is on that line.
-        insert_at = root_close - 1
-        if insert_at < 0 or content[insert_at] != "\n":
-            print(f"::warning::Unexpected format before root brace in {general_path}, skipping", file=sys.stderr)
-            continue
-        content = content[: insert_at] + ",\n" + new_entries_str + "\n" + content[insert_at :]
-
-        general_path.write_text(content)
+        with open(general_path, "w") as f:
+            json.dump(output, f, indent=2)
+            f.write("\n")
 
         print(f"Added missing models to {general_path}:")
         for m in missing:
