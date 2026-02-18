@@ -3,22 +3,70 @@
   "description": "",
   "default": {
     "params": [
-      { "key": "max_tokens", "defaultValue": 128, "minValue": 1, "maxValue": 4096 },
-      { "key": "temperature", "defaultValue": 0.8, "minValue": 0, "maxValue": 2 },
-      { "key": "stop", "defaultValue": null, "type": "array-of-strings", "skipValues": [null, []] },
-      { "key": "top_p", "defaultValue": 0.1, "minValue": 0, "maxValue": 1 },
-      { "key": "n", "defaultValue": 1, "minValue": 1, "maxValue": 10 },
-      { "key": "frequency_penalty", "defaultValue": 0, "minValue": -2, "maxValue": 2 },
-      { "key": "presence_penalty", "defaultValue": 0, "minValue": -2, "maxValue": 2 },
-      { "key": "stream", "defaultValue": true, "type": "boolean" },
+      {
+        "key": "max_tokens",
+        "defaultValue": 128,
+        "minValue": 1,
+        "maxValue": 4096
+      },
+      {
+        "key": "temperature",
+        "defaultValue": 0.8,
+        "minValue": 0,
+        "maxValue": 2
+      },
+      {
+        "key": "stop",
+        "defaultValue": null,
+        "type": "array-of-strings",
+        "skipValues": [null, []]
+      },
+      {
+        "key": "top_p",
+        "defaultValue": 0.1,
+        "minValue": 0,
+        "maxValue": 1
+      },
+      {
+        "key": "n",
+        "defaultValue": 1,
+        "minValue": 1,
+        "maxValue": 10
+      },
+      {
+        "key": "frequency_penalty",
+        "defaultValue": 0,
+        "minValue": -2,
+        "maxValue": 2
+      },
+      {
+        "key": "presence_penalty",
+        "defaultValue": 0,
+        "minValue": -2,
+        "maxValue": 2
+      },
+      {
+        "key": "stream",
+        "defaultValue": true,
+        "type": "boolean"
+      },
       {
         "key": "tool_choice",
         "type": "non-view-manage-data",
         "defaultValue": null,
         "options": [
-          { "value": "none", "name": "None" },
-          { "value": "auto", "name": "Auto" },
-          { "value": "required", "name": "Required" },
+          {
+            "value": "none",
+            "name": "None"
+          },
+          {
+            "value": "auto",
+            "name": "Auto"
+          },
+          {
+            "value": "required",
+            "name": "Required"
+          },
           {
             "value": "custom",
             "name": "Custom",
@@ -40,7 +88,6 @@
         "key": "parallel_tool_calls",
         "type": "boolean",
         "defaultValue": true,
-
         "skipValues": [null, true],
         "rule": {
           "default": {
@@ -50,26 +97,84 @@
           }
         }
       },
-      { "key": "logit_bias", "defaultValue": null, "type": "string", "skipValues": [null] }
+      {
+        "key": "logit_bias",
+        "defaultValue": null,
+        "type": "string",
+        "skipValues": [null]
+      }
     ],
-    "messages": { "options": ["system", "user", "assistant", "developer"] },
-    "type": { "primary": "chat", "supported": [] }
+    "messages": {
+      "options": ["system", "user", "assistant", "developer"]
+    },
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
-
   "gpt-4": {
-    "params": [{ "key": "max_tokens", "maxValue": 8192 }],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 8192
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
-  "gpt-4-0314": { "params": [{ "key": "max_tokens", "maxValue": 8192 }], "type": { "primary": "chat" } },
+  "gpt-4-0314": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 8192
+      }
+    ],
+    "type": {
+      "primary": "chat"
+    }
+  },
   "gpt-4-0613": {
-    "params": [{ "key": "max_tokens", "maxValue": 8192 }],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 8192
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
-  "gpt-4-32k": { "params": [{ "key": "max_tokens", "maxValue": 32768 }], "type": { "primary": "chat" } },
-  "gpt-4-32k-0613": { "params": [{ "key": "max_tokens", "maxValue": 32768 }], "type": { "primary": "chat" } },
+  "gpt-4-32k": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 32768
+      }
+    ],
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-4-32k-0613": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 32768
+      }
+    ],
+    "type": {
+      "primary": "chat"
+    }
+  },
   "gpt-4-1106-preview": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -84,7 +189,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -93,16 +201,30 @@
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
   "gpt-4-vision-preview": {
-    "params": [{ "key": "max_tokens", "maxValue": 4096 }],
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
     "removeParams": ["logit_bias"],
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4-0125-preview": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -117,7 +239,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -126,17 +251,30 @@
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
   "gpt-4-1106-vision-preview": {
-    "params": [{ "key": "max_tokens", "maxValue": 4096 }],
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
     "removeParams": ["logit_bias"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4-turbo-preview": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -151,7 +289,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -160,12 +301,17 @@
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-4-turbo": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -180,7 +326,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -189,12 +338,17 @@
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-4-turbo-2024-04-09": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -209,7 +363,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -218,13 +375,28 @@
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
-  "gpt-4-32k-0314": { "params": [{ "key": "max_tokens", "maxValue": 32768 }], "type": { "primary": "chat" } },
+  "gpt-4-32k-0314": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 32768
+      }
+    ],
+    "type": {
+      "primary": "chat"
+    }
+  },
   "gpt-4o": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -239,7 +411,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -249,22 +424,38 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-4o-mini": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -279,7 +470,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -289,22 +483,38 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4o-mini-2024-07-18": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -319,7 +529,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -329,22 +542,38 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4o-2024-05-13": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -359,7 +588,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -368,11 +600,17 @@
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-4o-2024-08-06": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -387,7 +625,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -397,23 +638,38 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-4o-2024-11-20": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -428,7 +684,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -437,12 +696,17 @@
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-3.5-turbo": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -457,7 +721,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -466,16 +733,40 @@
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
-  "gpt-3.5-turbo-0301": { "params": [{ "key": "max_tokens", "maxValue": 4096 }], "type": { "primary": "chat" } },
+  "gpt-3.5-turbo-0301": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
+    "type": {
+      "primary": "chat"
+    }
+  },
   "gpt-3.5-turbo-0613": {
-    "params": [{ "key": "max_tokens", "maxValue": 4096 }],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
   "gpt-3.5-turbo-1106": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -490,7 +781,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -499,11 +793,17 @@
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
   "gpt-3.5-turbo-0125": {
     "params": [
-      { "key": "max_tokens", "maxValue": 4096 },
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -518,7 +818,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           }
@@ -527,39 +830,92 @@
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
   "gpt-3.5-turbo-16k": {
-    "params": [{ "key": "max_tokens", "maxValue": 16384 }],
-    "type": { "primary": "chat", "supported": ["tools"] }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    }
   },
   "gpt-3.5-turbo-instruct": {
-    "params": [{ "key": "max_tokens", "maxValue": 4096 }],
-    "type": { "primary": "text" },
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
+    "type": {
+      "primary": "text"
+    },
     "removeParams": ["tool_choice", "response_format"]
   },
   "text-davinci-003": {
-    "params": [{ "key": "max_tokens", "maxValue": 4096 }],
-    "type": { "primary": "text" },
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
+    "type": {
+      "primary": "text"
+    },
     "removeParams": ["tool_choice", "response_format"]
   },
   "text-davinci-002": {
-    "params": [{ "key": "max_tokens", "maxValue": 4096 }],
-    "type": { "primary": "text" },
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 4096
+      }
+    ],
+    "type": {
+      "primary": "text"
+    },
     "removeParams": ["tool_choice", "response_format"]
   },
   "davinci-002": {
-    "params": [{ "key": "max_tokens", "maxValue": 16384 }],
-    "type": { "primary": "text" },
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      }
+    ],
+    "type": {
+      "primary": "text"
+    },
     "removeParams": ["tool_choice", "response_format"]
   },
   "babbage-002": {
-    "params": [{ "key": "max_tokens", "maxValue": 16384 }],
-    "type": { "primary": "text" },
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      }
+    ],
+    "type": {
+      "primary": "text"
+    },
     "removeParams": ["tool_choice", "response_format"]
   },
   "o1": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 }],
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      }
+    ],
     "removeParams": [
       "temperature",
       "top_p",
@@ -570,11 +926,23 @@
       "stream",
       "max_tokens"
     ],
-    "type": { "primary": "chat", "supported": ["image"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o1-preview": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 }],
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      }
+    ],
     "removeParams": [
       "temperature",
       "top_p",
@@ -585,12 +953,23 @@
       "stream",
       "max_tokens"
     ],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o1-preview-2024-09-12": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 }],
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      }
+    ],
     "removeParams": [
       "temperature",
       "top_p",
@@ -601,12 +980,23 @@
       "stream",
       "max_tokens"
     ],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o1-mini": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 65536 }],
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 65536
+      }
+    ],
     "removeParams": [
       "temperature",
       "top_p",
@@ -617,11 +1007,23 @@
       "stream",
       "max_tokens"
     ],
-    "type": { "primary": "chat", "supported": ["image"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o1-mini-2024-09-12": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 65536 }],
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 65536
+      }
+    ],
     "removeParams": [
       "temperature",
       "top_p",
@@ -632,12 +1034,23 @@
       "stream",
       "max_tokens"
     ],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o1-2024-12-17": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 }],
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      }
+    ],
     "removeParams": [
       "temperature",
       "top_p",
@@ -648,13 +1061,22 @@
       "stream",
       "max_tokens"
     ],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o3-mini": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -669,7 +1091,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -679,11 +1104,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -710,13 +1145,22 @@
       }
     ],
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o3-mini-2025-01-31": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -731,7 +1175,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -741,11 +1188,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -772,13 +1229,22 @@
       }
     ],
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o3": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -793,7 +1259,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -803,11 +1272,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -834,13 +1313,22 @@
       }
     ],
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o3-2025-04-16": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -855,7 +1343,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -865,11 +1356,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -896,27 +1397,75 @@
       }
     ],
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "text-curie-001": {
-    "params": [{ "key": "max_tokens", "maxValue": 2048 }],
-    "type": { "primary": "text" }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 2048
+      }
+    ],
+    "type": {
+      "primary": "text"
+    }
   },
   "text-babbage-001": {
-    "params": [{ "key": "max_tokens", "maxValue": 2048 }],
-    "type": { "primary": "text" }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 2048
+      }
+    ],
+    "type": {
+      "primary": "text"
+    }
   },
   "text-ada-001": {
-    "params": [{ "key": "max_tokens", "maxValue": 2048 }],
-    "type": { "primary": "text" }
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 2048
+      }
+    ],
+    "type": {
+      "primary": "text"
+    }
   },
-  "text-davinci-001": { "params": [{ "key": "max_tokens", "maxValue": 2048 }], "type": { "primary": "text" } },
-  "davinci": { "params": [{ "key": "max_tokens", "maxValue": 2048 }], "type": { "primary": "text" } },
+  "text-davinci-001": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 2048
+      }
+    ],
+    "type": {
+      "primary": "text"
+    }
+  },
+  "davinci": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 2048
+      }
+    ],
+    "type": {
+      "primary": "text"
+    }
+  },
   "gpt-4.5-preview-2025-02-27": {
     "params": [
-      { "key": "max_tokens", "maxValue": 16384 },
+      {
+        "key": "max_tokens",
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -931,7 +1480,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -941,26 +1493,64 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
-  "text-embedding-ada-002": { "type": { "primary": "embedding" }, "disablePlayground": true },
-  "text-moderation-stable": { "type": { "primary": "moderation" }, "disablePlayground": true },
-  "text-moderation-latest": { "type": { "primary": "moderation" }, "disablePlayground": true },
-  "text-moderation-001": { "type": { "primary": "moderation" }, "disablePlayground": true },
+  "text-embedding-ada-002": {
+    "type": {
+      "primary": "embedding"
+    },
+    "disablePlayground": true
+  },
+  "text-moderation-stable": {
+    "type": {
+      "primary": "moderation"
+    },
+    "disablePlayground": true
+  },
+  "text-moderation-latest": {
+    "type": {
+      "primary": "moderation"
+    },
+    "disablePlayground": true
+  },
+  "text-moderation-001": {
+    "type": {
+      "primary": "moderation"
+    },
+    "disablePlayground": true
+  },
   "o4-mini": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -975,7 +1565,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -985,11 +1578,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1016,13 +1619,22 @@
       }
     ],
     "removeParams": ["top_p", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens", "temperature"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "o4-mini-2025-04-16": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1037,7 +1649,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1047,11 +1662,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1078,13 +1703,22 @@
       }
     ],
     "removeParams": ["top_p", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens", "temperature"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] },
-    "messages": { "options": ["user", "assistant", "developer"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    },
+    "messages": {
+      "options": ["user", "assistant", "developer"]
+    }
   },
   "gpt-4.1": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1099,7 +1733,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1109,11 +1746,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1121,13 +1768,20 @@
       }
     ],
     "removeParams": ["max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] },
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    },
     "isDefault": true
   },
   "gpt-4.1-2025-04-14": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1142,7 +1796,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1152,11 +1809,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1164,12 +1831,19 @@
       }
     ],
     "removeParams": ["max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4.1-mini": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1184,7 +1858,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1194,11 +1871,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1206,12 +1893,19 @@
       }
     ],
     "removeParams": ["max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4.1-mini-2025-04-14": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1226,7 +1920,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1236,11 +1933,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1248,12 +1955,19 @@
       }
     ],
     "removeParams": ["max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4.1-nano": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1268,7 +1982,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1278,11 +1995,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1290,12 +2017,19 @@
       }
     ],
     "removeParams": ["max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4.1-nano-2025-04-14": {
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1310,7 +2044,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1320,11 +2057,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1332,48 +2079,102 @@
       }
     ],
     "removeParams": ["max_tokens"],
-
-    "type": { "primary": "chat", "supported": ["image", "tools"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "tools"]
+    }
   },
   "gpt-4o-realtime-preview-2025-06-03": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "o3-deep-research": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 }],
-    "type": { "primary": "chat", "supported": [] }
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "o3-deep-research-2025-06-26": {
-    "params": [{ "key": "max_completion_tokens", "defaultValue": 1000, "minValue": 1, "maxValue": 100000 }],
-    "type": { "primary": "chat", "supported": [] }
+    "params": [
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 1000,
+        "minValue": 1,
+        "maxValue": 100000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "o4-mini-deep-research": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "o4-mini-deep-research-2025-06-26": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "gpt-4o-mini-realtime-preview": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "gpt-4o-mini-realtime-preview-2024-12-17": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "gpt-4o-search-preview": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "gpt-4o-mini-search-preview": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "codex-mini-latest": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "gpt-4o-mini-search-preview-2025-03-11": {
-    "type": { "primary": "chat", "supported": [] }
+    "type": {
+      "primary": "chat",
+      "supported": []
+    }
   },
   "gpt-5-mini": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1388,7 +2189,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1398,18 +2202,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1442,13 +2260,20 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5-nano": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 16384 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1463,7 +2288,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1473,18 +2301,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1517,13 +2359,20 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1538,7 +2387,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1548,11 +2400,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -1572,7 +2434,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1582,18 +2447,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1626,13 +2505,20 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5-2025-08-07": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1647,7 +2533,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1657,18 +2546,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1701,13 +2604,20 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5-mini-2025-08-07": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1722,7 +2632,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1732,18 +2645,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1776,13 +2703,20 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5-nano-2025-08-07": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 16384 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 16384
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1797,7 +2731,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1807,18 +2744,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1851,13 +2802,20 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5-chat-latest": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 32768 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 32768
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1872,7 +2830,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1882,18 +2843,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       },
-
-      { "key": "verbosity", "enum": ["low", "medium", "high", null], "defaultValue": null, "skipValues": [null] },
+      {
+        "key": "verbosity",
+        "enum": ["low", "medium", "high", null],
+        "defaultValue": null,
+        "skipValues": [null]
+      },
       {
         "key": "reasoning",
         "defaultValue": null,
@@ -1926,20 +2901,28 @@
         "skipValues": [null]
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "text-embedding-3-small": {
-    "type": { "primary": "embedding" },
+    "type": {
+      "primary": "embedding"
+    },
     "disablePlayground": true
   },
   "text-embedding-3-large": {
-    "type": { "primary": "embedding" },
+    "type": {
+      "primary": "embedding"
+    },
     "disablePlayground": true
   },
   "gpt-5-codex": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-5-pro": {
     "disablePlayground": true,
@@ -1954,7 +2937,12 @@
       "stream"
     ],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -1969,7 +2957,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -1979,11 +2970,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -2003,7 +3004,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2013,19 +3017,31 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5-pro-2025-10-06": {
     "disablePlayground": true,
@@ -2040,7 +3056,12 @@
       "stream"
     ],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -2055,7 +3076,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2065,11 +3089,21 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
@@ -2089,7 +3123,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2099,96 +3136,151 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "sora-2": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "sora-2-pro": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-image-1-mini": {
     "disablePlayground": true,
-    "type": { "primary": "text", "supported": ["image_generation"] }
+    "type": {
+      "primary": "text",
+      "supported": ["image_generation"]
+    }
   },
   "gpt-image-1": {
     "disablePlayground": true,
-    "type": { "primary": "text", "supported": ["image_generation"] }
+    "type": {
+      "primary": "text",
+      "supported": ["image_generation"]
+    }
   },
   "gpt-realtime-mini-2025-10-06": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-realtime-mini": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-realtime": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-realtime-2025-08-28": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-4o-realtime-preview": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "o1-pro": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "o1-pro-2025-03-19": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "o3-pro": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "o3-pro-2025-06-10": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-audio-mini-2025-10-06": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-audio-2025-08-28": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-audio": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-4o-transcribe": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-4o-mini-transcribe": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-5.1": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -2203,7 +3295,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2213,24 +3308,41 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5.1-2025-11-13": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -2245,7 +3357,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2255,44 +3370,71 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5.1-codex": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-5.1-codex-mini": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-5.1-chat-latest": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "omni-moderation-2024-09-26": {
     "disablePlayground": true,
-    "type": { "primary": "moderation" }
+    "type": {
+      "primary": "moderation"
+    }
   },
   "omni-moderation-latest": {
     "disablePlayground": true,
-    "type": { "primary": "moderation" }
+    "type": {
+      "primary": "moderation"
+    }
   },
   "gpt-5.2": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -2307,7 +3449,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2317,24 +3462,41 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5.2-2025-12-11": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -2349,7 +3511,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2359,24 +3524,41 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5.2-chat-latest": {
     "removeParams": ["temperature", "top_p", "n", "presence_penalty", "frequency_penalty", "logit_bias", "max_tokens"],
     "params": [
-      { "key": "max_completion_tokens", "defaultValue": 20000, "minValue": 1, "maxValue": 272000 },
+      {
+        "key": "max_completion_tokens",
+        "defaultValue": 20000,
+        "minValue": 1,
+        "maxValue": 272000
+      },
       {
         "key": "response_format",
         "defaultValue": null,
@@ -2391,7 +3573,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_object"
+                }
               }
             }
           },
@@ -2401,27 +3586,43 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": { "type": "string", "value": "json_schema" },
-                "json_schema": { "type": "object" }
+                "type": {
+                  "type": "string",
+                  "value": "json_schema"
+                },
+                "json_schema": {
+                  "type": "object"
+                }
               }
             },
-            "params": { "key": "json_schema", "defaultValue": null, "type": "json", "skipValues": [null] }
+            "params": {
+              "key": "json_schema",
+              "defaultValue": null,
+              "type": "json",
+              "skipValues": [null]
+            }
           }
         ],
         "skipValues": [null],
         "type": "string"
       }
     ],
-
-    "type": { "primary": "chat", "supported": ["tools", "image"] }
+    "type": {
+      "primary": "chat",
+      "supported": ["tools", "image"]
+    }
   },
   "gpt-5.2-pro": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-5.2-pro-2025-12-11": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "chatgpt-4o-latest": {
     "type": {
@@ -2548,10 +3749,456 @@
   },
   "gpt-5.2-codex": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
   },
   "gpt-5.3-codex": {
     "disablePlayground": true,
-    "type": { "primary": "text" }
+    "type": {
+      "primary": "text"
+    }
+  },
+  "ada-v2": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "chatgpt-image-latest": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-3.5-turbo": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-3.5-turbo-0125": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-3.5-turbo-0613": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-3.5-turbo-1106": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4.1": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4.1-2025-04-14": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4.1-mini": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4.1-mini-2025-04-14": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4.1-nano-2025-04-14": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4o": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4o-2024-08-06": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4o-mini": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:gpt-4o-mini-2024-07-18": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "ft:o4-mini-2025-04-16": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-3.5-turbo-16k-0613": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-3.5-turbo-instruct-0914": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-audio-preview-2024-12-17": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-audio-preview-2025-06-03": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-mini-transcribe-2025-03-20": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-mini-transcribe-2025-12-15": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-mini-tts-2025-03-20": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-mini-tts-2025-12-15": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-realtime-preview-2024-12-17": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-4o-transcribe-diarize": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-5.1-codex-max": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-5.2-codex-2026-02-18": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-audio-mini-2025-12-15": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-image-1.5": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-image-1.5-2025-12-16": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "gpt-realtime-mini-2025-12-15": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "tts-1-1106": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
+  },
+  "tts-1-hd-1106": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": ["image", "pdf", "doc", "tools"]
+    },
+    "removeParams": ["top_p"]
   }
 }
