@@ -1,0 +1,65 @@
+# On every PR that touches pricing files, ensure each pricing provider's models
+# exist in the corresponding general/*.json; add any missing models with a minimal stub.
+name: Sync pricing models to general
+
+on:
+  pull_request:
+    paths:
+      - 'pricing/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    name: Sync missing models to general
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed pricing files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- 'pricing/*.json' || true)
+          if [[ -z "$FILES" ]]; then
+            echo "paths<<EOF" >> "$GITHUB_OUTPUT"
+            echo "" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+            echo "No pricing files changed"
+            exit 0
+          fi
+          echo "paths<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$FILES" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "Changed pricing files:"
+          echo "$FILES"
+
+      - name: Sync each changed pricing file to general
+        if: steps.changed.outputs.paths != ''
+        run: |
+          echo "${{ steps.changed.outputs.paths }}" | while IFS= read -r f; do
+            [[ -z "$f" ]] && continue
+            python3 .github/scripts/sync_pricing_to_general.py "$f" || true
+          done
+
+      - name: Check for uncommitted changes
+        id: status
+        if: steps.changed.outputs.paths != ''
+        run: |
+          git diff --quiet general/ && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git status --short general/
+
+      - name: Commit and push added models
+        if: steps.changed.outputs.paths != '' && steps.status.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add general/
+          git commit -m "chore: add missing pricing models to general configs [sync-pricing-to-general]"
+          git push origin HEAD:${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
