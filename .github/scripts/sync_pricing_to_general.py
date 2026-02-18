@@ -81,14 +81,19 @@ def main() -> int:
             new_entries.append(f'{indent}"{model_id}": {{\n{inner}')
         new_entries_str = ",\n".join(new_entries)
 
-        # Insert before the root closing "}": keep the rest of the file unchanged.
+        # Insert before the root closing "}": put comma on the last model's line, then new entries.
         root_close = len(content) - 1
         while root_close >= 0 and content[root_close] in " \t\n\r":
             root_close -= 1
         if root_close < 0 or content[root_close] != "}":
             print(f"::warning::Could not find root closing brace in {general_path}, skipping", file=sys.stderr)
             continue
-        content = content[: root_close] + ",\n" + new_entries_str + "\n" + content[root_close :]
+        # Newline before root "}" is at root_close - 1; insert after last "}" so comma is on that line.
+        insert_at = root_close - 1
+        if insert_at < 0 or content[insert_at] != "\n":
+            print(f"::warning::Unexpected format before root brace in {general_path}, skipping", file=sys.stderr)
+            continue
+        content = content[: insert_at] + ",\n" + new_entries_str + "\n" + content[insert_at :]
 
         general_path.write_text(content)
 
