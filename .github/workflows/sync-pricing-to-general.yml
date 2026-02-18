@@ -41,7 +41,7 @@ jobs:
       - name: Sync each changed pricing file to general
         if: steps.changed.outputs.paths != ''
         run: |
-          for f in ${{ steps.changed.outputs.paths }}; do
+          echo "${{ steps.changed.outputs.paths }}" | while IFS= read -r f; do
             [[ -z "$f" ]] && continue
             python3 .github/scripts/sync_pricing_to_general.py "$f" || true
           done
@@ -60,6 +60,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add general/
           git commit -m "chore: add missing pricing models to general configs [sync-pricing-to-general]"
-          git push
+          git push origin HEAD:${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
