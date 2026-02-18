@@ -547,4 +547,25 @@
       "top_p"
     ]
   }
+,
+  "claude-sonnet-4-6": {
+    "params": [
+      {
+        "key": "max_tokens",
+        "maxValue": 64000
+      }
+    ],
+    "type": {
+      "primary": "chat",
+      "supported": [
+        "image",
+        "pdf",
+        "doc",
+        "tools"
+      ]
+    },
+    "removeParams": [
+      "top_p"
+    ]
+  }
 }
