@@ -1842,7 +1842,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00003
+          "price": 0.00001
         },
         "response_token": {
           "price": 0.00025
@@ -1870,7 +1870,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00003
+          "price": 0.00001
         },
         "response_token": {
           "price": 0.00025
@@ -1898,7 +1898,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00001
+          "price": 0.0000075
         },
         "response_token": {
           "price": 0.00004
@@ -1932,7 +1932,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00001
+          "price": 0.0000075
         },
         "response_token": {
           "price": 0.00004
@@ -2091,6 +2091,784 @@
         },
         "response_token": {
           "price": 0.00015
+        }
+      }
+    }
+  },
+  "nano-banana-pro-preview-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0002
+        },
+        "response_token": {
+          "price": 0.0012
+        },
+        "request_image_token": {
+          "price": 1.1e-7
+        },
+        "response_image_token": {
+          "price": 0.012
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 1.4
+          }
+        }
+      }
+    }
+  },
+  "nano-banana-pro-preview-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0002
+        },
+        "response_token": {
+          "price": 0.0012
+        },
+        "request_image_token": {
+          "price": 1.1e-7
+        },
+        "response_image_token": {
+          "price": 0.012
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 1.4
+          }
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-native-audio-preview-12-2025-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0002
+        },
+        "request_audio_token": {
+          "price": 0.0003
+        },
+        "response_audio_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-native-audio-preview-12-2025-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0002
+        },
+        "request_audio_token": {
+          "price": 0.0003
+        },
+        "response_audio_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-native-audio-latest-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0002
+        },
+        "request_audio_token": {
+          "price": 0.0003
+        },
+        "response_audio_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-native-audio-latest-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0002
+        },
+        "request_audio_token": {
+          "price": 0.0003
+        },
+        "response_audio_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-native-audio-preview-09-2025-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0002
+        },
+        "request_audio_token": {
+          "price": 0.0003
+        },
+        "response_audio_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-native-audio-preview-09-2025-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0002
+        },
+        "request_audio_token": {
+          "price": 0.0003
+        },
+        "response_audio_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-preview-tts-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0
+        },
+        "response_audio_token": {
+          "price": 0.001
+        }
+      }
+    }
+  },
+  "gemini-2.5-flash-preview-tts-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0
+        },
+        "response_audio_token": {
+          "price": 0.001
+        }
+      }
+    }
+  },
+  "gemini-2.5-pro-preview-tts-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0001
+        },
+        "response_token": {
+          "price": 0
+        },
+        "response_audio_token": {
+          "price": 0.002
+        }
+      }
+    }
+  },
+  "gemini-2.5-pro-preview-tts-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0001
+        },
+        "response_token": {
+          "price": 0
+        },
+        "response_audio_token": {
+          "price": 0.002
+        }
+      }
+    }
+  },
+  "gemini-2.0-flash-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00001
+        },
+        "response_token": {
+          "price": 0.00004
+        },
+        "cache_write_input_token": {
+          "price": 0.0000025
+        },
+        "cache_read_input_token": {
+          "price": 0.0000025
+        },
+        "request_audio_token": {
+          "price": 0.00007
+        },
+        "cache_read_audio_input_token": {
+          "price": 0.0000175
+        },
+        "response_image_token": {
+          "price": 0.003
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          }
+        }
+      }
+    }
+  },
+  "gemini-2.0-flash-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00001
+        },
+        "response_token": {
+          "price": 0.00004
+        },
+        "cache_write_input_token": {
+          "price": 0.0000025
+        },
+        "cache_read_input_token": {
+          "price": 0.0000025
+        },
+        "request_audio_token": {
+          "price": 0.00007
+        },
+        "cache_read_audio_input_token": {
+          "price": 0.0000175
+        },
+        "response_image_token": {
+          "price": 0.003
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          }
+        }
+      }
+    }
+  },
+  "gemini-2.0-flash-exp-image-generation-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00001
+        },
+        "response_token": {
+          "price": 0.00004
+        },
+        "cache_write_input_token": {
+          "price": 0.0000025
+        },
+        "cache_read_input_token": {
+          "price": 0.0000025
+        },
+        "request_audio_token": {
+          "price": 0.00007
+        },
+        "cache_read_audio_input_token": {
+          "price": 0.0000175
+        },
+        "response_image_token": {
+          "price": 0.003
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          }
+        }
+      }
+    }
+  },
+  "gemini-2.0-flash-exp-image-generation-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00001
+        },
+        "response_token": {
+          "price": 0.00004
+        },
+        "cache_write_input_token": {
+          "price": 0.0000025
+        },
+        "cache_read_input_token": {
+          "price": 0.0000025
+        },
+        "request_audio_token": {
+          "price": 0.00007
+        },
+        "cache_read_audio_input_token": {
+          "price": 0.0000175
+        },
+        "response_image_token": {
+          "price": 0.003
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          }
+        }
+      }
+    }
+  },
+  "gemini-2.0-flash-lite-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0000075
+        },
+        "response_token": {
+          "price": 0.00003
+        }
+      }
+    }
+  },
+  "gemini-2.0-flash-lite-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0000075
+        },
+        "response_token": {
+          "price": 0.00003
+        }
+      }
+    }
+  },
+  "gemini-pro-latest-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000125
+        },
+        "response_token": {
+          "price": 0.001
+        },
+        "cache_write_input_token": {
+          "price": 0.0000125
+        },
+        "cache_read_input_token": {
+          "price": 0.0000125
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          }
+        }
+      }
+    }
+  },
+  "gemini-pro-latest-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00025
+        },
+        "response_token": {
+          "price": 0.0015
+        },
+        "cache_write_input_token": {
+          "price": 0.000025
+        },
+        "cache_read_input_token": {
+          "price": 0.000025
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          }
+        }
+      }
+    }
+  },
+  "gemini-exp-1206-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "gemini-exp-1206-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "gemini-2.5-computer-use-preview-10-2025-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000125
+        },
+        "response_token": {
+          "price": 0.001
+        }
+      }
+    }
+  },
+  "gemini-2.5-computer-use-preview-10-2025-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00025
+        },
+        "response_token": {
+          "price": 0.0015
+        }
+      }
+    }
+  },
+  "deep-research-pro-preview-12-2025-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0002
+        },
+        "response_token": {
+          "price": 0.0012
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 1.4
+          }
+        }
+      }
+    }
+  },
+  "deep-research-pro-preview-12-2025-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0004
+        },
+        "response_token": {
+          "price": 0.0018
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 1.4
+          }
+        }
+      }
+    }
+  },
+  "gemini-embedding-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000015
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "gemini-embedding-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000015
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "imagen-4.0-fast-generate-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 2
+        }
+      }
+    }
+  },
+  "imagen-4.0-fast-generate-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 2
+        }
+      }
+    }
+  },
+  "imagen-4.0-generate-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 4
+        }
+      }
+    }
+  },
+  "imagen-4.0-generate-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 4
+        }
+      }
+    }
+  },
+  "imagen-4.0-ultra-generate-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 6
+        }
+      }
+    }
+  },
+  "imagen-4.0-ultra-generate-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 6
+        }
+      }
+    }
+  },
+  "imagen-4.0-generate-preview-06-06-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 4
+        }
+      }
+    }
+  },
+  "imagen-4.0-generate-preview-06-06-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 4
+        }
+      }
+    }
+  },
+  "imagen-4.0-ultra-generate-preview-06-06-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 6
+        }
+      }
+    }
+  },
+  "imagen-4.0-ultra-generate-preview-06-06-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 6
+        }
+      }
+    }
+  },
+  "veo-3.1-generate-preview-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 40
+        },
+        "additional_units": {
+          "video_duration_4k": {
+            "price": 60
+          }
+        }
+      }
+    }
+  },
+  "veo-3.1-generate-preview-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 40
+        },
+        "additional_units": {
+          "video_duration_4k": {
+            "price": 60
+          }
+        }
+      }
+    }
+  },
+  "veo-3.1-fast-generate-preview-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 15
+        },
+        "additional_units": {
+          "video_duration_4k": {
+            "price": 35
+          }
+        }
+      }
+    }
+  },
+  "veo-3.1-fast-generate-preview-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 15
+        },
+        "additional_units": {
+          "video_duration_4k": {
+            "price": 35
+          }
+        }
+      }
+    }
+  },
+  "veo-3.0-generate-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 40
+        }
+      }
+    }
+  },
+  "veo-3.0-generate-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 40
+        }
+      }
+    }
+  },
+  "veo-3.0-fast-generate-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 15
+        }
+      }
+    }
+  },
+  "veo-3.0-fast-generate-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 15
+        }
+      }
+    }
+  },
+  "veo-2.0-generate-001-lte-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 35
+        }
+      }
+    }
+  },
+  "veo-2.0-generate-001-gt-128k": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 35
         }
       }
     }
