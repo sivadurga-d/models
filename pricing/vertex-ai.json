@@ -570,7 +570,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00001
+          "price": 0.000015
         },
         "response_token": {
           "price": 0
@@ -650,7 +650,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00001
+          "price": 0.0025
         },
         "response_token": {
           "price": 0
@@ -2208,7 +2208,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 20
         },
         "response_token": {
           "price": 0
@@ -2231,7 +2231,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 10
         },
         "response_token": {
           "price": 0
@@ -2300,7 +2300,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 50
         },
         "response_token": {
           "price": 0
@@ -2449,7 +2449,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 10
         },
         "response_token": {
           "price": 0
@@ -2472,7 +2472,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 20
         },
         "response_token": {
           "price": 0
@@ -2599,6 +2599,152 @@
         },
         "response_token": {
           "price": 0.00075
+        }
+      }
+    }
+  },
+  "gemini-3.1-pro-preview": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0002
+        },
+        "response_token": {
+          "price": 0.0012
+        },
+        "cache_write_input_token": {
+          "price": 0.00002
+        },
+        "cache_read_input_token": {
+          "price": 0.00002
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 1400
+          },
+          "search": {
+            "price": 1400
+          }
+        }
+      }
+    }
+  },
+  "claude-opus-4-5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0005
+        },
+        "response_token": {
+          "price": 0.0025
+        },
+        "cache_write_input_token": {
+          "price": 0.000625
+        },
+        "cache_read_input_token": {
+          "price": 0.00005
+        }
+      }
+    }
+  },
+  "claude-opus-4-1": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0015
+        },
+        "response_token": {
+          "price": 0.0075
+        },
+        "cache_write_input_token": {
+          "price": 0.001875
+        },
+        "cache_read_input_token": {
+          "price": 0.00015
+        }
+      }
+    }
+  },
+  "claude-opus-4": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0015
+        },
+        "response_token": {
+          "price": 0.0075
+        },
+        "cache_write_input_token": {
+          "price": 0.001875
+        },
+        "cache_read_input_token": {
+          "price": 0.00015
+        }
+      }
+    }
+  },
+  "claude-sonnet-4-5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0003
+        },
+        "response_token": {
+          "price": 0.0015
+        },
+        "cache_write_input_token": {
+          "price": 0.000375
+        },
+        "cache_read_input_token": {
+          "price": 0.00003
+        }
+      }
+    }
+  },
+  "claude-haiku-4-5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0001
+        },
+        "response_token": {
+          "price": 0.0005
+        },
+        "cache_write_input_token": {
+          "price": 0.000125
+        },
+        "cache_read_input_token": {
+          "price": 0.00001
+        }
+      }
+    }
+  },
+  "claude-3-haiku": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000025
+        },
+        "response_token": {
+          "price": 0.000125
+        },
+        "cache_write_input_token": {
+          "price": 0.00003
+        },
+        "cache_read_input_token": {
+          "price": 0.000003
+        }
+      }
+    }
+  },
+  "multimodalembedding": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.02
+        },
+        "response_token": {
+          "price": 0
         }
       }
     }
