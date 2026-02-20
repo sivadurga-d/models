@@ -3836,5 +3836,17 @@
         }
       }
     }
+  },
+  "gpt-5.2-codex-2026-02-18": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000175
+        },
+        "response_token": {
+          "price": 0.0014
+        }
+      }
+    }
   }
 }
