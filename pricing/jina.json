@@ -40,7 +40,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -52,7 +52,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -64,7 +64,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -88,7 +88,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -100,7 +100,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -112,7 +112,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -124,7 +124,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -136,7 +136,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.000002
+          "price": 0.000005
         },
         "response_token": {
           "price": 0
@@ -397,6 +397,150 @@
     }
   },
   "jina-ai/jina-embeddings-v5-text-nano": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000002
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-code-embeddings-0.5b": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-code-embeddings-1.5b": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-embeddings-v4": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-reranker-m0": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-clip-v2": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-embeddings-v3": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-clip-v1": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-reranker-v1-tiny-en": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-reranker-v1-turbo-en": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-embedding-b-en-v1": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-embeddings-v5-text-small": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "jina-embeddings-v5-text-nano": {
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
