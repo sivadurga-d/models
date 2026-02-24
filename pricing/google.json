@@ -752,7 +752,7 @@
             "price": 2.5
           },
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -786,7 +786,7 @@
             "price": 2.5
           },
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -1531,7 +1531,7 @@
         },
         "additional_units": {
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -1540,7 +1540,7 @@
           "price": 0.000015
         },
         "response_token": {
-          "price": 0.000125
+          "price": 0.000015
         }
       }
     }
@@ -1556,7 +1556,7 @@
         },
         "additional_units": {
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -1565,7 +1565,7 @@
           "price": 0.000015
         },
         "response_token": {
-          "price": 0.000125
+          "price": 0.000015
         }
       }
     }
@@ -1580,8 +1580,11 @@
           "price": 0.0012
         },
         "additional_units": {
+          "input_image": {
+            "price": 0.00002
+          },
           "image_token": {
-            "price": 0.012
+            "price": 0.00012
           }
         }
       },
@@ -1605,8 +1608,11 @@
           "price": 0.0012
         },
         "additional_units": {
+          "input_image": {
+            "price": 0.00002
+          },
           "image_token": {
-            "price": 0.012
+            "price": 0.00012
           }
         }
       },
@@ -1854,7 +1860,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00003
+          "price": 0.00005
         },
         "response_token": {
           "price": 0.00025
@@ -1882,7 +1888,7 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0.00003
+          "price": 0.00005
         },
         "response_token": {
           "price": 0.00025
@@ -2476,7 +2482,7 @@
             "price": 2.5
           },
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -2513,7 +2519,7 @@
             "price": 2.5
           },
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -2540,17 +2546,8 @@
           "price": 0.0000025
         },
         "additional_units": {
-          "web_search": {
-            "price": 3.5
-          },
-          "search": {
-            "price": 3.5
-          },
-          "grounding_maps": {
-            "price": 2.5
-          },
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -2577,17 +2574,8 @@
           "price": 0.0000025
         },
         "additional_units": {
-          "web_search": {
-            "price": 3.5
-          },
-          "search": {
-            "price": 3.5
-          },
-          "grounding_maps": {
-            "price": 2.5
-          },
           "image_token": {
-            "price": 0.003
+            "price": 0.00003
           }
         }
       },
@@ -2654,9 +2642,6 @@
       "batch_config": {
         "request_token": {
           "price": 0.0000075
-        },
-        "response_token": {
-          "price": 0
         }
       }
     }
@@ -2674,9 +2659,6 @@
       "batch_config": {
         "request_token": {
           "price": 0.0000075
-        },
-        "response_token": {
-          "price": 0
         }
       }
     }
@@ -2898,16 +2880,16 @@
         },
         "additional_units": {
           "image_token": {
-            "price": 0.012
+            "price": 0.00003
           }
         }
       },
       "batch_config": {
         "request_token": {
-          "price": 0.0001
+          "price": 0.000015
         },
         "response_token": {
-          "price": 0.0006
+          "price": 0.000015
         }
       }
     }
@@ -2923,16 +2905,16 @@
         },
         "additional_units": {
           "image_token": {
-            "price": 0.012
+            "price": 0.00003
           }
         }
       },
       "batch_config": {
         "request_token": {
-          "price": 0.0001
+          "price": 0.000015
         },
         "response_token": {
-          "price": 0.0006
+          "price": 0.000015
         }
       }
     }
