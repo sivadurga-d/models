@@ -2604,18 +2604,6 @@
     "type": { "primary": "chat", "supported": ["image", "tools"] },
     "removeParams": ["top_p"]
   },
-  "Cohere-rerank-v4.0-pro": {
-    "type": {
-      "primary": "rerank"
-    },
-    "disablePlayground": true
-  },
-  "Cohere-rerank-v4.0-fast": {
-    "type": {
-      "primary": "rerank"
-    },
-    "disablePlayground": true
-  },
   "claude-sonnet-4-6": {
     "params": [
       { "key": "max_tokens", "maxValue": 64000 },

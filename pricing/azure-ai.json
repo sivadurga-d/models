@@ -3525,29 +3525,5 @@
         }
       }
     }
-  },
-  "Cohere-rerank-v4.0-fast": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.2
-        },
-        "response_token": {
-          "price": 0
-        }
-      }
-    }
-  },
-  "Cohere-rerank-v4.0-pro": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.25
-        },
-        "response_token": {
-          "price": 0
-        }
-      }
-    }
   }
 }
