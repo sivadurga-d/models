@@ -2376,7 +2376,7 @@
       }
     ],
     "type": { "primary": "chat", "supported": ["image", "tools"] },
-    "removeParams": ["top_p"]
+    "removeParams": ["top_p", "temperature"]
   },
   "claude-haiku-4-5-20251001": {
     "params": [
@@ -2400,7 +2400,7 @@
       }
     ],
     "type": { "primary": "chat", "supported": ["image", "tools"] },
-    "removeParams": ["top_p"]
+    "removeParams": ["top_p", "temperature"]
   },
   "claude-opus-4-5-20251101": {
     "params": [
@@ -2606,7 +2606,7 @@
       }
     ],
     "type": { "primary": "chat", "supported": ["image", "tools"] },
-    "removeParams": ["top_p"]
+    "removeParams": ["top_p", "temperature"]
   },
   "claude-sonnet-4-6": {
     "params": [
