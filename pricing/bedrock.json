@@ -1275,6 +1275,24 @@
       }
     }
   },
+  "us-gov.anthropic.claude-sonnet-4-5-20250929-v1:0": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00036
+        },
+        "response_token": {
+          "price": 0.0018
+        },
+        "cache_write_input_token": {
+          "price": 0.00045
+        },
+        "cache_read_input_token": {
+          "price": 0.000036
+        }
+      }
+    }
+  },
   "anthropic.claude-haiku-4-5-20251001-v1:0": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -1629,6 +1647,32 @@
     }
   },
   "eu.anthropic.claude-opus-4-6-v1": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0005
+        },
+        "response_token": {
+          "price": 0.0025
+        },
+        "cache_write_input_token": {
+          "price": 0.000625
+        },
+        "cache_read_input_token": {
+          "price": 0.00005
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.00025
+        },
+        "response_token": {
+          "price": 0.00125
+        }
+      }
+    }
+  },
+  "global.anthropic.claude-opus-4-6-v1": {
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {

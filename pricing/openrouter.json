@@ -4224,6 +4224,18 @@
       }
     }
   },
+  "openai/gpt-5.3-codex": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000175
+        },
+        "response_token": {
+          "price": 0.0014
+        }
+      }
+    }
+  },
   "allenai/molmo-2-8b:free": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -4728,30 +4740,6 @@
       }
     }
   },
-  "bytedance-seed/seed-2.0-mini": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.00001
-        },
-        "response_token": {
-          "price": 0.00004
-        }
-      }
-    }
-  },
-  "google/gemini-3.1-flash-image-preview": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.000025
-        },
-        "response_token": {
-          "price": 0.00015
-        }
-      }
-    }
-  },
   "qwen/qwen3.5-35b-a3b": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -4808,42 +4796,6 @@
         },
         "response_token": {
           "price": 0.000012
-        }
-      }
-    }
-  },
-  "google/gemini-3.1-pro-preview-customtools": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.0002
-        },
-        "response_token": {
-          "price": 0.0012
-        }
-      }
-    }
-  },
-  "openai/gpt-5.3-codex": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.000175
-        },
-        "response_token": {
-          "price": 0.0014
-        }
-      }
-    }
-  },
-  "aion-labs/aion-2.0": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.00008
-        },
-        "response_token": {
-          "price": 0.00016
         }
       }
     }
