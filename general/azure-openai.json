@@ -3471,9 +3471,5 @@
   "gpt-5.2-codex": {
     "disablePlayground": true,
     "type": { "primary": "text" }
-  },
-  "gpt-5.3-codex": {
-    "disablePlayground": true,
-    "type": { "primary": "text" }
   }
 }
