@@ -1683,12 +1683,14 @@
   "gemini-3.1-flash-image-preview": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   },
   "nano-banana-pro-preview": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   },
   "gemini-pro-latest": {
     "type": {
@@ -1698,26 +1700,31 @@
   "veo-3.1-generate-preview": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   },
   "veo-3.1-fast-generate-preview": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   },
   "veo-3.0-generate-001": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   },
   "veo-3.0-fast-generate-001": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   },
   "veo-2.0-generate-001": {
     "type": {
       "primary": "chat"
-    }
+    },
+    "disablePlayground": true
   }
 }
