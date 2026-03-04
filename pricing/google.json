@@ -2695,10 +2695,24 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 0.00001
         },
         "response_token": {
-          "price": 0
+          "price": 0.00004
+        },
+        "cache_read_input_token": {
+          "price": 0.0000025
+        },
+        "additional_units": {
+          "image_token": {
+            "price": 0.003
+          },
+          "web_search": {
+            "price": 3.5
+          },
+          "search": {
+            "price": 3.5
+          }
         }
       }
     }
@@ -2707,10 +2721,24 @@
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
-          "price": 0
+          "price": 0.00001
         },
         "response_token": {
-          "price": 0
+          "price": 0.00004
+        },
+        "cache_read_input_token": {
+          "price": 0.0000025
+        },
+        "additional_units": {
+          "image_token": {
+            "price": 0.003
+          },
+          "web_search": {
+            "price": 3.5
+          },
+          "search": {
+            "price": 3.5
+          }
         }
       }
     }
