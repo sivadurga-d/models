@@ -578,7 +578,7 @@
       },
       "batch_config": {
         "request_token": {
-          "price": 0.000008
+          "price": 0.000002
         },
         "response_token": {
           "price": 0
@@ -658,7 +658,7 @@
       },
       "batch_config": {
         "request_token": {
-          "price": 0.000008
+          "price": 0.000002
         },
         "response_token": {
           "price": 0
@@ -980,6 +980,9 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         }
       },
@@ -1104,6 +1107,9 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         }
       },
@@ -1193,6 +1199,9 @@
             "price": 1.4
           },
           "search": {
+            "price": 1.4
+          },
+          "enterprise_web_search": {
             "price": 1.4
           }
         }
@@ -1455,6 +1464,9 @@
           },
           "image_token": {
             "price": 0.003
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         },
         "cache_read_input_token": {
@@ -1494,6 +1506,9 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         },
         "cache_read_input_token": {
@@ -1533,6 +1548,9 @@
           },
           "search": {
             "price": 1.4
+          },
+          "enterprise_web_search": {
+            "price": 1.4
           }
         },
         "cache_read_input_token": {
@@ -1569,6 +1587,9 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         },
         "cache_read_input_token": {
@@ -1605,6 +1626,9 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         },
         "cache_read_input_token": {
@@ -2495,6 +2519,9 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
         },
         "cache_read_input_token": {
@@ -2577,6 +2604,9 @@
             "price": 1.4
           },
           "search": {
+            "price": 1.4
+          },
+          "enterprise_web_search": {
             "price": 1.4
           }
         }
@@ -2690,6 +2720,9 @@
           },
           "search": {
             "price": 1.4
+          },
+          "enterprise_web_search": {
+            "price": 1.4
           }
         }
       },
@@ -2755,7 +2788,18 @@
           },
           "search": {
             "price": 1.4
+          },
+          "enterprise_web_search": {
+            "price": 1.4
           }
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.000025
+        },
+        "response_token": {
+          "price": 0.00015
         }
       }
     }
@@ -2811,6 +2855,17 @@
         },
         "response_token": {
           "price": 0.001
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 3.5
+          },
+          "search": {
+            "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
+          }
         }
       }
     }
@@ -2836,7 +2891,18 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.000015
+        },
+        "response_token": {
+          "price": 0.000125
         }
       }
     }
@@ -2859,7 +2925,18 @@
           },
           "search": {
             "price": 3.5
+          },
+          "enterprise_web_search": {
+            "price": 4.5
           }
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.000005
+        },
+        "response_token": {
+          "price": 0.00002
         }
       }
     }
@@ -2882,7 +2959,18 @@
           },
           "search": {
             "price": 1.4
+          },
+          "enterprise_web_search": {
+            "price": 1.4
           }
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.0000125
+        },
+        "response_token": {
+          "price": 0.000075
         }
       }
     }
@@ -2914,6 +3002,13 @@
         },
         "response_token": {
           "price": 0
+        },
+        "image": {
+          "default": {
+            "default": {
+              "price": 4
+            }
+          }
         }
       }
     }
@@ -3768,6 +3863,73 @@
         },
         "cache_read_input_token": {
           "price": 0.00001
+        }
+      }
+    }
+  },
+  "virtual-try-on-001": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 0
+        },
+        "image": {
+          "default": {
+            "default": {
+              "price": 6
+            }
+          }
+        }
+      }
+    }
+  },
+  "deepseek-ocr": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00003
+        },
+        "response_token": {
+          "price": 0.00012
+        }
+      }
+    }
+  },
+  "deepseek-ocr-maas": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00003
+        },
+        "response_token": {
+          "price": 0.00012
+        }
+      }
+    }
+  },
+  "deepseek-ocr-2": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
+  "glm-ocr": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0
+        },
+        "response_token": {
+          "price": 0
         }
       }
     }
