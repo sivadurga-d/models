@@ -3063,30 +3063,6 @@
       }
     }
   },
-  "codestral-2501-self-deploy": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0
-        },
-        "response_token": {
-          "price": 0
-        }
-      }
-    }
-  },
-  "mistral-ocr-2505": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.00000005
-        },
-        "response_token": {
-          "price": 0.00000005
-        }
-      }
-    }
-  },
   "mistral-medium-3": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -3183,18 +3159,6 @@
       }
     }
   },
-  "llama-guard": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0
-        },
-        "response_token": {
-          "price": 0
-        }
-      }
-    }
-  },
   "llama4": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -3216,18 +3180,6 @@
     }
   },
   "llama3_1": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0
-        },
-        "response_token": {
-          "price": 0
-        }
-      }
-    }
-  },
-  "prompt-guard": {
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
@@ -3561,18 +3513,6 @@
       }
     }
   },
-  "deepseek-ocr-2": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0
-        },
-        "response_token": {
-          "price": 0
-        }
-      }
-    }
-  },
   "deepseek-r1-0528-maas": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -3658,30 +3598,6 @@
         },
         "response_token": {
           "price": 0.000084
-        }
-      }
-    }
-  },
-  "deepseek-ocr": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.00003
-        },
-        "response_token": {
-          "price": 0.00012
-        }
-      }
-    }
-  },
-  "deepseek-ocr-maas": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0.00003
-        },
-        "response_token": {
-          "price": 0.00012
         }
       }
     }
@@ -3801,18 +3717,6 @@
         },
         "cache_read_input_token": {
           "price": 0.00001
-        }
-      }
-    }
-  },
-  "glm-ocr": {
-    "pricing_config": {
-      "pay_as_you_go": {
-        "request_token": {
-          "price": 0
-        },
-        "response_token": {
-          "price": 0
         }
       }
     }
