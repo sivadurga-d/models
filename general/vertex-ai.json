@@ -1866,6 +1866,12 @@
       "primary": "embedding"
     }
   },
+  "gemini-embedding-2": {
+    "disablePlayground": true,
+    "type": {
+      "primary": "embedding"
+    }
+  },
   "imagen-3.0-capability-002": {
     "disablePlayground": true,
     "type": {

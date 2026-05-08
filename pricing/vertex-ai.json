@@ -3085,6 +3085,18 @@
       }
     }
   },
+  "gemini-embedding-2": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00002
+        },
+        "response_token": {
+          "price": 0
+        }
+      }
+    }
+  },
   "imagen-3.0-generate-002": {
     "pricing_config": {
       "pay_as_you_go": {
