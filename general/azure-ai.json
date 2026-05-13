@@ -2339,6 +2339,9 @@
   "grok-4-20-reasoning": {
     "type": { "primary": "chat", "supported": ["image", "tools"] }
   },
+  "grok-4.20-beta-0309-non-reasoning": {
+    "type": { "primary": "chat", "supported": ["image", "tools"] }
+  },
   "grok-code-fast-1": {
     "type": { "primary": "chat" }
   },
