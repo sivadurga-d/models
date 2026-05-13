@@ -324,7 +324,7 @@
       }
     }
   },
-  "fireworks-ai/kimi-k2p6": {
+  "kimi-k2p6": {
     "pricing_config": {
       "pay_as_you_go": {
         "request_token": {
