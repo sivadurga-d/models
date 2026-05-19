@@ -2945,6 +2945,43 @@
       }
     }
   },
+  "gemini-3.5-flash": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00015
+        },
+        "response_token": {
+          "price": 0.0009
+        },
+        "cache_write_input_token": {
+          "price": 0.00015
+        },
+        "cache_read_input_token": {
+          "price": 0.000015
+        },
+        "additional_units": {
+          "web_search": {
+            "price": 1.4
+          },
+          "search": {
+            "price": 1.4
+          },
+          "enterprise_web_search": {
+            "price": 1.4
+          }
+        }
+      },
+      "batch_config": {
+        "request_token": {
+          "price": 0.000075
+        },
+        "response_token": {
+          "price": 0.00045
+        }
+      }
+    }
+  },
   "gemini-3.1-flash-image-preview": {
     "pricing_config": {
       "pay_as_you_go": {
