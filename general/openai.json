@@ -2928,5 +2928,35 @@
     ],
 
     "type": { "primary": "responses", "supported": ["tools", "image"], "unsupported": ["chat", "messages"] }
+  },
+  "gpt-realtime-whisper": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-realtime-translate": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-realtime-2": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "chat-latest": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-5.5-2026-04-23": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-5.5-pro-2026-04-23": {
+    "type": {
+      "primary": "chat"
+    }
   }
 }
