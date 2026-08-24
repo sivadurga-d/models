@@ -942,6 +942,54 @@
           }
         }
       }
+    },
+    "custom_pricing": {
+      "regions": {
+        "default": {
+          "execution_modes": {
+            "standard": {
+              "pricing_config": {
+                "pay_as_you_go": {
+                  "request_token": {
+                    "price": 0.00005
+                  },
+                  "response_token": {
+                    "price": 0.00015
+                  },
+                  "additional_units": {
+                    "web_search": {
+                      "price": 1
+                    },
+                    "file_search": {
+                      "price": 0.25
+                    }
+                  }
+                }
+              }
+            },
+            "batch": {
+              "pricing_config": {
+                "pay_as_you_go": {
+                  "request_token": {
+                    "price": 0.000025
+                  },
+                  "response_token": {
+                    "price": 0.000075
+                  },
+                  "additional_units": {
+                    "web_search": {
+                      "price": 1
+                    },
+                    "file_search": {
+                      "price": 0.25
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "gpt-3.5-turbo-16k": {
@@ -4037,6 +4085,80 @@
                 "pay_as_you_go": {
                   "request_token": {
                     "price": 0.00006999999999999999
+                  },
+                  "cache_read_input_token": {
+                    "price": 0.0000175
+                  },
+                  "response_token": {
+                    "price": 0.00028
+                  },
+                  "additional_units": {
+                    "web_search": {
+                      "price": 1
+                    },
+                    "file_search": {
+                      "price": 0.25
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "custom_pricing": {
+      "regions": {
+        "default": {
+          "execution_modes": {
+            "standard": {
+              "pricing_config": {
+                "pay_as_you_go": {
+                  "request_token": {
+                    "price": 0.00004
+                  },
+                  "cache_read_input_token": {
+                    "price": 0.00001
+                  },
+                  "response_token": {
+                    "price": 0.00016
+                  },
+                  "additional_units": {
+                    "web_search": {
+                      "price": 1
+                    },
+                    "file_search": {
+                      "price": 0.25
+                    }
+                  }
+                }
+              }
+            },
+            "batch": {
+              "pricing_config": {
+                "pay_as_you_go": {
+                  "request_token": {
+                    "price": 0.00002
+                  },
+                  "response_token": {
+                    "price": 0.00008
+                  },
+                  "additional_units": {
+                    "web_search": {
+                      "price": 1
+                    },
+                    "file_search": {
+                      "price": 0.25
+                    }
+                  }
+                }
+              }
+            },
+            "priority": {
+              "pricing_config": {
+                "pay_as_you_go": {
+                  "request_token": {
+                    "price": 0.00007
                   },
                   "cache_read_input_token": {
                     "price": 0.0000175
