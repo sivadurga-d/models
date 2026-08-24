@@ -264,6 +264,18 @@
       }
     }
   },
+  "google/gemini-3-pro-image": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0002
+        },
+        "response_token": {
+          "price": 0.0012
+        }
+      }
+    }
+  },
   "x-ai/grok-4.1-fast": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -4860,6 +4872,30 @@
       }
     }
   },
+  "google/gemini-3.1-flash-image": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.00005
+        },
+        "response_token": {
+          "price": 0.0003
+        }
+      }
+    }
+  },
+  "google/gemini-3.1-flash-lite-image": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000025
+        },
+        "response_token": {
+          "price": 0.00015
+        }
+      }
+    }
+  },
   "nvidia/llama-nemotron-embed-vl-1b-v2:free": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -5364,6 +5400,18 @@
       }
     }
   },
+  "z-ai/glm-5.2": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000094
+        },
+        "response_token": {
+          "price": 0.0003
+        }
+      }
+    }
+  },
   "google/gemma-4-26b-a4b-it:free": {
     "pricing_config": {
       "pay_as_you_go": {
@@ -5420,6 +5468,18 @@
         },
         "response_token": {
           "price": 0.000195
+        }
+      }
+    }
+  },
+  "qwen/qwen3.7-max": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.000125
+        },
+        "response_token": {
+          "price": 0.000375
         }
       }
     }
@@ -5648,6 +5708,42 @@
         },
         "response_token": {
           "price": 0.0025
+        }
+      }
+    }
+  },
+  "anthropic/claude-opus-4.8": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0005
+        },
+        "response_token": {
+          "price": 0.0025
+        }
+      }
+    }
+  },
+  "anthropic/claude-sonnet-5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0002
+        },
+        "response_token": {
+          "price": 0.001
+        }
+      }
+    }
+  },
+  "anthropic/claude-fable-5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.001
+        },
+        "response_token": {
+          "price": 0.005
         }
       }
     }
@@ -6128,6 +6224,23 @@
         },
         "response_token": {
           "price": 0
+        }
+      }
+    }
+  },
+  "microsoft/mai-image-2.5": {
+    "pricing_config": {
+      "pay_as_you_go": {
+        "request_token": {
+          "price": 0.0005
+        },
+        "response_token": {
+          "price": 0.0047
+        },
+        "additional_units": {
+          "input_image": {
+            "price": 0.0008
+          }
         }
       }
     }
