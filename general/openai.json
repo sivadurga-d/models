@@ -2958,5 +2958,40 @@
     "type": {
       "primary": "chat"
     }
+  },
+  "gpt-5.6-luna": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-5.6-terra": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-5.6-sol": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-realtime-2.1": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-realtime-2.1-mini": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-live-transcribe": {
+    "type": {
+      "primary": "chat"
+    }
+  },
+  "gpt-transcribe": {
+    "type": {
+      "primary": "chat"
+    }
   }
 }
